@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite';
-import {FirebaseDataProvider} from 'react-admin-firebase';
+import {FirebaseDataProvider, FirebaseAuthProvider} from 'react-admin-firebase';
 
 import 'firebase/firestore'
 
@@ -16,6 +16,7 @@ const config = {
 };
 const options = [];
 export const dataProvider = FirebaseDataProvider(config, options);
+export const authProvider = FirebaseAuthProvider(config, options); 
 
 // Initialize Firebase
 //const fb = initializeApp(firebaseConfig);
