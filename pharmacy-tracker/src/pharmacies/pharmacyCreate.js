@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SimpleForm, TextInput, required, Create } from 'react-admin';
+import { SimpleForm, TextInput, required, Create, NumberInput } from 'react-admin';
 
 
 const CreateTitle = () => {
@@ -8,8 +8,6 @@ const CreateTitle = () => {
 };
 
 export const PharmacyCreateView = (props) => {
-
-
     return (
         <Create {...props}
         title={<CreateTitle/>}>
@@ -21,7 +19,8 @@ export const PharmacyCreateView = (props) => {
                 <TextInput source="Apertura Vespertina" label="Evening Opening" validate={[required()]}/>
                 <TextInput source="Cierre Vespertino" label="Evening Closing" validate={[required()]}/>
                 <TextInput source="Municipio" label="City" validate={[required()]}/>
-                <TextInput source="Comentarios" label="Coordinates" validate={[required()]}/>
+                <NumberInput source="Localización.latitude" label="Latitude" validate={[required()]}/>
+                <NumberInput source="Localización.longitude" label="Longitude" validate={[required()]}/>
             </SimpleForm>
         </Create>
     );

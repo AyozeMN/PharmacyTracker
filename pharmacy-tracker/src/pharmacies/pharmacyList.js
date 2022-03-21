@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { List, Datagrid, TextField, EditButton, DeleteButton } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, DeleteButton, NumberField } from 'react-admin';
 
 
 const CreateTitle = () => {
@@ -20,6 +20,8 @@ export const PharmacyListView = (props) => {
                 <TextField source="Cierre Vespertino" label="Evening Closing" />
                 <TextField source="Municipio" label="City" />
                 <TextField source="Comentarios" label="Coordinates" />
+                <NumberField textAlign="left" source="Localización.latitude" options={{maximumFractionDigits: 7}} label="Latitude" />
+                <NumberField textAlign="left" source="Localización.longitude" options={{maximumFractionDigits: 7}} label="Longitude" />
                 <EditButton/>
                 <DeleteButton/>
             </Datagrid>
