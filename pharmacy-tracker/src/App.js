@@ -1,8 +1,6 @@
 import './App.css';
 import  { PharmaciesList } from './pharmacies/PharmaciesList';
 import { dataProvider , authProvider} from './firebase/firebaseConfig.js';
-// import { forgotPassword } from './login/forgotPassword.js'
-
 
 import * as React from "react";
 import { Admin, Resource} from 'react-admin';
@@ -12,7 +10,6 @@ import { Admin, Resource} from 'react-admin';
 const App = () => (
     <Admin dataProvider={dataProvider} authProvider={authProvider}>
         <Resource name="pharmacies" list={PharmaciesList} />
-
     </Admin>
 );
 
