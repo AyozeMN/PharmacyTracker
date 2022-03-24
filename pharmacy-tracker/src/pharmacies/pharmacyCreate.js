@@ -13,14 +13,14 @@ export const PharmacyCreateView = (props) => {
         <Create {...props}
         title={<CreateTitle/>}>
             <SimpleForm>
-                <TextInput source="Direcci n" label="Address" validate={[required()]}/>
-                <TextInput source="Telefono" label="Phone" validate={[required()]}/>
-                <TextInput type="time" source="Apertura Matutina" label="Morning Opening" validate={[required()]}/>
-                <TextInput type="time" source="Cierre Matutino" label="Morning Closing" validate={[required()]}/>
-                <TextInput type="time" source="Apertura Vespertina" label="Evening Opening" validate={[required()]}/>
-                <TextInput type="time" source="Cierre Vespertino" label="Evening Closing" validate={[required()]}/>
-                <TextInput source="Municipio" label="City" validate={[required()]}/>
-                <LatLngInput validate={[required()]} />
+                <TextInput source="Address" label="Address" validate={[required()]}/>
+                <TextInput source="Phone" label="Phone" validate={[required()]}/>
+                <TextInput type="time" source="mOpening" label="Morning Opening" validate={[required()]}/>
+                <TextInput type="time" source="mClosing" label="Morning Closing" validate={[required()]}/>
+                <TextInput type="time" source="eOpening" label="Evening Opening" validate={[required()]}/>
+                <TextInput type="time" source="eClosing" label="Evening Closing" validate={[required()]}/>
+                <TextInput source="City" label="City" validate={[required()]}/>
+                <LatLngInput />
             </SimpleForm>
         </Create>
     );

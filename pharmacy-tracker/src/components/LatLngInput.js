@@ -1,7 +1,7 @@
-import { NumberInput } from "react-admin";
+import { NumberInput, required } from "react-admin";
 
 
-const validateLatField = myLat => {
+/*const validateLatField = myLat => {
     const latRegEx = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?)/;
     if(latRegEx.test(myLat)) {
 
@@ -13,12 +13,12 @@ const validateLngField = myLng => {
     if(lngRegEx.test(myLng)) {
 
     }
-};
+};*/
 
 export const LatLngInput = () => (
     <span>
-        <NumberInput source="Localización.latitude" label="Latitude" />
+        <NumberInput source="Location.latitude" label="Latitude" validate={[required()]}/>
         &nbsp;
-        <NumberInput source="Localización.longitude" label="Longitude" />
+        <NumberInput source="Location.longitude" label="Longitude" validate={[required()]}/>
     </span>
 );

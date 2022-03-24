@@ -12,21 +12,20 @@ export const PharmacyListView = (props) => {
         <List {...props}
         title={<CreateTitle/>}>
             <Datagrid>
-                <TextField source="Direcci n" label="Address"/>
-                <TextField source="Telefono" label="Phone" />
-                <TextField source="Apertura Matutina" label="Morning Opening" />
-                <TextField source="Cierre Matutino" label="Morning Closing" />
-                <TextField source="Apertura Vespertina" label="Evening Opening" />
-                <TextField source="Cierre Vespertino" label="Evening Closing" />
-                <TextField source="Municipio" label="City" />
-                <TextField source="Comentarios" label="Coordinates" />
-                <NumberField textAlign="left" source="Localización.latitude" options={{maximumFractionDigits: 7}} label="Latitude" />
-                <NumberField textAlign="left" source="Localización.longitude" options={{maximumFractionDigits: 7}} label="Longitude" />
-                <EditButton/>
-                <DeleteButton/>
+                <TextField source="Address" label="Address"/>
+                <TextField source="Phone" label="Phone" />
+                <TextField source="mOpening" label="Morning Opening" />
+                <TextField source="mClosing" label="Morning Closing" />
+                <TextField source="eOpening" label="Evening Opening" />
+                <TextField source="eClosing" label="Evening Closing" />
+                <TextField source="City" label="City" />
+                <TextField source="Owner" label="Owner" />
+                <NumberField textAlign="left" source="Location.latitude" options={{maximumFractionDigits: 7}} label="Latitude" />
+                <NumberField textAlign="left" source="Location.longitude" options={{maximumFractionDigits: 7}} label="Longitude" />
+                <EditButton  label="" />
+                <DeleteButton label=""/>
             </Datagrid>
         </List>
     );
 };
-
 
