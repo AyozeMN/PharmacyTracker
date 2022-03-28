@@ -1,2 +1,0 @@
-# PharmacyTracker
-MDA project
