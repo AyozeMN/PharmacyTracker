@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SimpleForm, TextInput, required, Create } from 'react-admin';
+import { SimpleForm, TextInput, required, Create, ImageInput, ImageField } from 'react-admin';
 
 
 const CreateTitle = () => {
@@ -13,11 +13,14 @@ export const ProductCreateView = (props) => {
         <Create {...props}
         title={<CreateTitle/>}>
             <SimpleForm>
-                <TextInput source="name" label="Name" validate={[required()]}/>
-                <TextInput source="description" label="Description" validate={[required()]}/>
+                <TextInput source="name" label="Name" validate={[required()]} />
+                <TextInput source="description" label="Description" validate={[required()]} />
+                <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
+                    <ImageField source="src" title="title" />
+                </ImageInput>
             </SimpleForm>
         </Create>
     );
 };
 
-
+export default ProductCreateView;
