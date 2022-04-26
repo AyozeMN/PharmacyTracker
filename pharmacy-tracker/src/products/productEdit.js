@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SimpleForm, TextInput, Edit, ImageField, ImageInput } from 'react-admin';
+import { SimpleForm, TextInput, Edit, ImageField, ImageInput, ReferenceInput, SelectInput } from 'react-admin';
 
 
 
@@ -16,6 +16,9 @@ export const ProductEditView = (props) => {
             <SimpleForm>
                 <TextInput source="name" label="Name" required/>
                 <TextInput source="description" label="Description" required/>
+                <ReferenceInput label="Category" source="category" reference="categories" >
+                    <SelectInput label="Category" optionText="name" />
+                </ReferenceInput>
                 <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
                     <ImageField source="src" title="title" />
                 </ImageInput>
