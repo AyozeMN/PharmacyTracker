@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite';
 import {FirebaseDataProvider, FirebaseAuthProvider} from 'react-admin-firebase';
-
+import { getAuth } from 'firebase/auth';
 import 'firebase/firestore'
 
 // Your web app's Firebase configuration
@@ -23,5 +23,6 @@ export const authProvider = FirebaseAuthProvider(config, options);
 //export const db = fb.firestore();
 const app = initializeApp(config);
 export const db = getFirestore(app);
+export const auth = getAuth(app);
 
 
