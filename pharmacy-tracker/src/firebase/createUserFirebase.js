@@ -1,6 +1,6 @@
-import { auth } from "./firebaseConfig";
+import { auth, db } from "./firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { setDoc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 
 export function registerUser() {
     const signUpUser = (name, email, password) => createUserWithEmailAndPassword(auth, name, email, password)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SimpleForm, TextInput, PasswordInput, required, Create, SelectInput } from 'react-admin';
-import { registerUser } from '../firebase/createUserFirebase';
+//import { registerUser } from '../firebase/createUserFirebase';
 
 const CreateTitle = () => {
     return <span>Create user</span>;
@@ -8,14 +8,11 @@ const CreateTitle = () => {
 
 const roles = ['admin', 'pharmacy', 'normal_user'];
 const toChoices = items => items.map(item => ({ id: item, name: item }));
-
+/*
 const { signUpUser } = registerUser();
 
-const [user, setUser] = useState({
-    name: '',
-    email: '',
-    password: '',
-    role: ''
+const [error, setError] = useState({
+    message: ''
 });
 
 const handleChange = ({ target: { name, value } }) => {
@@ -31,8 +28,22 @@ const handleSubmitUser = async (e) => {
         setError(error.message);
     }
 };
+*/
+
 
 export const UserCreateView = (props) => {
+
+    const [user, setUser] = useState({
+        name: '',
+        email: '',
+        password: '',
+        role: ''
+    });
+    
+    const handleChange = ({ target: { name, value } }) => {
+        setUser({ ...user, [name]: value });
+    };
+
     return (
         <Create {...props}
         title={<CreateTitle/>}>
@@ -45,3 +56,5 @@ export const UserCreateView = (props) => {
         </Create>
     );
 };
+
+export default UserCreateView;

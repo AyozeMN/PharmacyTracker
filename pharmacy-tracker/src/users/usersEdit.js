@@ -22,3 +22,5 @@ export const UserEditView = (props) => {
         </Edit>
     );
 };
+
+export default UserEditView;

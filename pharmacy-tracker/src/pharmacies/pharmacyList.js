@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { List, Datagrid, TextField, EditButton, DeleteButton, NumberField } from 'react-admin';
-
 
 const CreateTitle = () => {
     return <span>Pharmacies list</span>;
@@ -28,4 +26,3 @@ export const PharmacyListView = (props) => {
         </List>
     );
 };
-

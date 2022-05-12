@@ -1,26 +1,11 @@
 import React from 'react';
+import { List, Datagrid, TextField, EditButton, DeleteButton, ReferenceField, ChipField } from 'react-admin';
 
-import
-{
-    List,
-    Datagrid,
-    TextField,
-    EditButton,
-    DeleteButton,
-    ReferenceField,
-    ChipField,
-} from 'react-admin';
-
-
-const CreateTitle = () =>
-{
+const CreateTitle = () => {
     return <span>Product list</span>;
 };
 
-
-
-export const ProductListView = (props) =>
-{
+export const ProductListView = (props) => {
     return (
         <List {...props}
             title={<CreateTitle />}>
@@ -39,3 +24,4 @@ export const ProductListView = (props) =>
     );
 };
 
+export default ProductListView;

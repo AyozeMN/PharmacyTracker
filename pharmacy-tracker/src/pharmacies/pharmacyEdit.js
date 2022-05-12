@@ -1,8 +1,6 @@
 import React from 'react';
-
 import { SimpleForm, TextInput, Edit, required } from 'react-admin';
 import { LatLngInput } from '../components/LatLngInput';
-
 
 const CreateTitle = () => {
     return <span>Edit pharmacy</span>;
@@ -26,5 +24,3 @@ export const PharmacyEditView = (props) => {
         </Edit>
     );
 };
-
-

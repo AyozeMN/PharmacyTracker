@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { List, Datagrid, TextField, EditButton, DeleteButton } from 'react-admin';
-
 
 const CreateTitle = () => {
     return <span>Users list</span>;
@@ -21,3 +19,5 @@ export const UserListView = (props) => {
         </List>
     );
 };
+
+export default UserListView;
