@@ -1,12 +1,10 @@
 import React from 'react';
-
 import { SimpleForm, TextInput, required, Create } from 'react-admin';
 import { LatLngInput } from '../components/LatLngInput';
 
 const CreateTitle = () => {
     return <span>Create pharmacy</span>;
 };
-
 
 export const PharmacyCreateView = (props) => {
     return (
@@ -25,5 +23,3 @@ export const PharmacyCreateView = (props) => {
         </Create>
     );
 };
-
-

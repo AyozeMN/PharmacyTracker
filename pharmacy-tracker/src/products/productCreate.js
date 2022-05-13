@@ -1,12 +1,9 @@
 import React from 'react';
-
 import { SimpleForm, TextInput, required, Create, ImageInput, ImageField, ReferenceInput, SelectInput } from 'react-admin';
-
 
 const CreateTitle = () => {
     return <span>Create product</span>;
 };
-
 
 export const ProductCreateView = (props) => {
     return (
