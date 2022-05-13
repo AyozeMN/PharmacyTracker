@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleForm, TextInput, required, Create, ImageInput, ImageField, ReferenceInput, SelectInput } from 'react-admin';
+import { SimpleForm, TextInput, required, Create, ReferenceInput, SelectInput } from 'react-admin';
 
 const CreateTitle = () => {
     return <span>Create product</span>;
@@ -15,9 +15,10 @@ export const ProductCreateView = (props) => {
                 <ReferenceInput label="Category" source="category" reference="categories" required>
                     <SelectInput label="Category" optionText="name" />
                 </ReferenceInput>
-                <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
+                <TextInput source="img" label="Link Image" validate={[required()]} />
+                {/* <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
                     <ImageField source="src" title="title" />
-                </ImageInput>
+                </ImageInput> */}
             </SimpleForm>
         </Create>
     );

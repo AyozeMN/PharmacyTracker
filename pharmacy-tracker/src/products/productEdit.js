@@ -16,9 +16,10 @@ export const ProductEditView = (props) => {
                 <ReferenceInput label="Category" source="category" reference="categories" >
                     <SelectInput label="Category" optionText="name" />
                 </ReferenceInput>
-                <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
+                <TextInput source="img" label="Link Image" validate={[required()]} />
+                {/* <ImageInput source="image" label="Image" accept="image/*" mulitple={false}>
                     <ImageField source="src" title="title" />
-                </ImageInput>
+                </ImageInput> */}
             </SimpleForm>
         </Edit>
     );
